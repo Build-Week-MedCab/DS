@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>gardenapi</title>
+    <link rel="stylesheet" href="https://unpkg.com/picnic"/>
+  </head>
+  <style>
+    body{
+      background-color: black;
+      color: green;
+      margin: 20px;
+    }
+    article{
+      display: flex;
+      margin: 20px;
+    }
+  </style>
+  <body>
+    {% block body %}
+    <h1><b>{{ title }}</b></h1>
+    <article>
+    <div>
+      <p>
+        This API houses natural language processing model
+        that returns marijuana strain recommendations
+        based on the user's preferences and necessities.
+      </p>
+    </div>
+    </article>
+    <img src="static/images/pot.png" alt="Pot Leaf">
+    {% endblock %}
+    <script src="https://cdn.jsdelivr.net/npm/prebid-universal-creative@1.8.0/dist/creative.min.js"/>
+  </body>
+</html
