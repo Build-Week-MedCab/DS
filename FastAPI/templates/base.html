@@ -2,33 +2,74 @@
 <html>
   <head>
     <title>gardenapi</title>
-    <link rel="stylesheet" href="https://unpkg.com/picnic"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.3/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   </head>
   <style>
-    body{
-      background-color: black;
-      color: green;
-      margin: 20px;
+    * {
+      box-sizing: border-box;
     }
-    article{
-      display: flex;
-      margin: 20px;
+    
+    body {
+      margin: 0;
     }
+    
+    /* Style the header */
+    .header {
+      border: 2px solid black;
+      padding: 25px;
+      background-image: url("static/images/weed4.jpg");
+      background-repeat: no-repeat;
+      background-size: auto;
+
+    }
+    
+    /* Style the top navigation bar */
+    .topnav {
+      overflow: hidden;
+      background-color: green;
+    }
+    
+    /* Style the topnav links */
+    .topnav a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    
+    /* Change color on hover */
+    .topnav a:hover {
+      background-color: #ddd;
+      color: purple;
+    }
+    
   </style>
   <body>
+    <div class="header">
+      <h1>Green Gardens</h1>
+    </div>
+  
+    <nav>
+    <div class="topnav">
+      <a href="/">Home Page</a>
+      <a href="/update" class="button warning">Strains</a>
+    </div>
+
     {% block body %}
     <h1><b>{{ title }}</b></h1>
+  </article>
+  <!-- <img src="static/images/weed4.jpg" alt="Pot Leaf"> -->
     <article>
     <div>
       <p>
-        This API houses natural language processing model
-        that returns marijuana strain recommendations
-        based on the user's preferences and necessities.
+        Let us know how we can help you!
       </p>
     </div>
-    </article>
-    <img src="static/images/pot.png" alt="Pot Leaf">
+    <!-- </article>
+    <img src="static/images/marijuana.jpg" alt="Pot Leaf"> -->
     {% endblock %}
-    <script src="https://cdn.jsdelivr.net/npm/prebid-universal-creative@1.8.0/dist/creative.min.js"/>
   </body>
 </html
