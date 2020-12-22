@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 """Main module to drive the API"""
 from fastapi import FastAPI, Request, Form
 from fastapi.middleware.cors import CORSMiddleware
@@ -42,7 +44,7 @@ api.add_middleware(
 @api.get("/", tags=["root"])
 async def index(request: Request):
     return templates.TemplateResponse(
-        "base.html",
+        "index.html",
         {"request": request,
         "title": "Welcome to the Green Garden API"})
 
