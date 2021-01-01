@@ -3,8 +3,10 @@
 """Main module to drive the API"""
 from fastapi import FastAPI, Request, Form
 from fastapi.middleware.cors import CORSMiddleware
-from .my_jinja import templates, mount_static_directory
-from .model import TheStash
+from FastAPI.my_jinja import templates, mount_static_directory
+from FastAPI.model import TheStash
+
+# from . import my_jinja
 
 tags_metadata = [
     {
@@ -44,7 +46,7 @@ api.add_middleware(
 @api.get("/", tags=["root"])
 async def index(request: Request):
     return templates.TemplateResponse(
-        "index.html",
+        "base.html",
         {"request": request,
         "title": "Welcome to the Green Garden API"})
 
