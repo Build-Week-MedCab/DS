@@ -13,4 +13,4 @@ step 3: pip install -r requirements.txt
 step 4: uvicorn FastAPI.main:api --host=0.0.0.0 --port=${PORT:-5000} …you may have to change your local host to 5000
 
 ### Heroku link
-https://blooming-cliffs-56719.herokuapp.com/
+https://urstrain.herokuapp.com/
